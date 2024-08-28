@@ -21,74 +21,160 @@
         </ul>
     </nav>
     <header id="cabecalho">
-        <h1>Minha Página HTML - básico</h1>
+        <h1>HTML - Básico</h1>
     </header>
-
+    <!--------Estruturais---------->
     <main>
-        <section>
-            <h2>Seção de Listas</h2>
+        <section class="estruturais">
+            <div>
+                <h1>Estruturais</h1>
+                <p>As tags estruturais são usadas para definir a estrutura básica de um documento HTML.</p>
 
-            <h3>Lista nao ordenada</h3>
-            <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-            </ul>
+                <h2>1. </h2>
+                <p>Define o início e o fim de um documento HTML.</p>
+                <pre>
+        <code>
+        html
+            head
+                meta charset="UTF-8"
+                titleMeu Título/title
+            /head
+            body
+                pConteúdo da página./p
+            /body
+        /html
+        </code>
 
-            <h3>Lista Ordenada</h3>
-            <ol>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-            </ol>
+        <hr>
+                </pre>
+                <h2>2. head</h2>
+                <p>Contém metadados, links para estilos, scripts e o título da página.</p>
+                <pre>
+        <code>
+        head
+            meta charset="UTF-8"
+            titleTítulo da Página/title
+            link rel="stylesheet" href="styles.css"
+            script src="script.js"/script
+        /head
+        </code>
+<hr>
+
+                </pre>
+
+                <h2>3. body</h2>
+                <p>Contém o conteúdo visível da página, como texto, imagens e vídeos.</p>
+                <pre>
+        <code>
+        body
+            h1Título Principal/h1
+            pEste é um parágrafo de exemplo./p
+        /body
+        </code>
+<hr>
+
+                </pre>
+
+                <h2>4. div</h2>
+                <p>Usado para agrupar blocos de conteúdo. Geralmente usado para estilização com CSS.</p>
+                <pre>
+        <code>
+        div class="container"
+            pEste é um bloco de conteúdo dentro de um div./p
+        /div
+        </code>
+<hr>
+
+                </pre>
+
+                <h2>5. span</h2>
+                <p>Usado para estilizar partes específicas de um texto sem quebrar a linha. Similar ao div, mas em nível
+                    inline.</p>
+                <pre>
+        <code>
+        pEste é um texto normal, mas span style="color: red;"este texto está em vermelho/span./p
+        </code>
+
+                </pre>
+            </div>
         </section>
+        <!--------Textuais---------->
         <section>
-            <h2>Imagem e Video</h2>
+            <div>
+                <h1>Textuais</h1>
+                <p>As tags textuais são usadas para formatar e estruturar o texto dentro de uma página HTML.</p>
 
+                <h2>1. h1 - h6</h2>
+                <p>Tags de cabeçalho que variam de h1 (mais importante) a h6 (menos importante).</p>
+                <pre>
+        <code>
+        h1Cabeçalho de Nível 1/h1
+        h2Cabeçalho de Nível 2/h2
+        h3Cabeçalho de Nível 3/h3
+        h4Cabeçalho de Nível 4/h4
+        h5Cabeçalho de Nível 5/h5
+        h6Cabeçalho de Nível 6/h6
+        </code>
+<hr>
+                </pre>
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/1ROfSD0eU5E?si=vhlidVSo2oOZ8j0D"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h2>2. p</h2>
+                <p>Usado para definir um parágrafo de texto.</p>
+                <pre>
+        <code>
+        pEste é um parágrafo simples que contém algum texto para demonstração./p
+        </code>
+<hr>
+                </pre>
+
+                <h2>3. a</h2>
+                <p>Define um hiperlink, que pode ser usado para navegar para outra página ou parte da mesma página.</p>
+                <pre>
+        <code>
+        a href="https://exemplo.com" target="_blank"Clique aqui para visitar o exemplo.com/a
+        </code>
+<hr>
+                </pre>
+
+                <h2>4. strong</h2>
+                <p>Usado para enfatizar texto, geralmente exibido em negrito.</p>
+                <pre>
+        <code>
+        pAqui está um texto normal, mas strongeste texto está em negrito/strong./p
+        </code>
+<hr>
+                </pre>
+
+                <h2>5. em</h2>
+                <p>Usado para enfatizar texto, geralmente exibido em itálico.</p>
+                <pre>
+        <code>
+        pAqui está um texto normal, mas emeste texto está em itálico/em./p
+        </code>
+<hr>
+                </pre>
+            </div>
         </section>
-        <section>
-            <h2>Form simples</h2>
-            <form action="#">
-                <div>
-                    <label for="nome">Nome:</label>
-                    <input type="text" name="nome" id="nome" />
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" />
-                </div>
-                <div>
-                    <label for="senha">Senha:</label>
-                    <input type="password" name="senha" id="senha" />
-                </div>
-            </form>
-
-        </section>
+        <!------------------>
         <section class="last">
-            <h2>Table simples</h2>
-            <table border="3">
-                <thead>
-                    <tr>
-                        <th>Horario</th>
-                        <th>Horario</th>
-                        <th>Horario</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>09:00 - 10:00</td>
-                        <td>09:00 - 10:00</td>
-                        <td>09:00 - 10:00</td>
-                    </tr>
-                </tbody>
-            </table>
+
+        </section>
+        <!------------------>
+        <section class="last">
+
         </section>
 
+        <!------------------>
+        <section class="last">
+
+        </section>
+        <!------------------>
+        <section class="last">
+
+        </section>
+        <!------------------>
+
+        <!------------------>
     </main>
     <footer>
         &copy; João Vitor @2024
