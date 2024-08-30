@@ -7,6 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar {
@@ -36,30 +38,11 @@ body {
     color: #f39c12;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-
 header {
     background-color: #181818;
     color: #fff;
     padding: 16px;
     text-align: center;
-}
-
-header a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    background-color: #ff5100;
-    margin-top: 20px;
-}
-
-header a:hover {
-    background-color: #ff5100;
 }
 
 main {
@@ -75,26 +58,8 @@ section {
     margin: 16px 0;
 }
 
-.last {
-    margin-bottom: 61px;
-}
-
 h2 {
-    border-bottom: 2px solid #ff5100;
     padding-bottom: 8px;
-}
-
-label {
-    display: block;
-    margin-top: 8px;
-}
-
-input {
-    width: 99%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 8px;
 }
 
 footer {
@@ -105,4 +70,8 @@ footer {
     bottom: 0;
     position: fixed;
     width: 100%;
+}
+
+hr{
+    margin: 10px 0 20px 0;
 }
