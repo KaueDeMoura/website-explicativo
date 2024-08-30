@@ -7,6 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar {
@@ -34,13 +36,6 @@ body {
 
 .nav-links a:hover {
     color: #f39c12;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-
 }
 
 header {
@@ -80,7 +75,6 @@ section {
 }
 
 h2 {
-    border-bottom: 2px solid #ff5100;
     padding-bottom: 8px;
 }
 
@@ -93,16 +87,76 @@ input {
     width: 99%;
     padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 8px;
 }
 
-footer {
-    background-color: #181818;
+hr{
+    margin: 10px 0 20px 0;
+}
+
+footer{
+    background-color: #303030;
     padding: 16px;
     text-align: center;
     color: #FFF;
     bottom: 0;
     position: fixed;
     width: 100%;
+}
+.final i {
+    text-decoration: none;
+    color: white;
+}
+
+.final a {
+    color: #efefef;
+    text-decoration: none;
+}
+
+
+.footer a{
+    color: #efefef;
+}
+
+.azul{
+    color: #1100ff;;
+}
+
+.amarelo{
+    background-color: yellow;
+}
+
+.size24{
+    font-size: 24px;
+}
+
+.margin20{
+    margin: 20px;
+}
+
+.padding15{
+    padding: 15px;
+}
+
+.borderred{
+    border: 2px solid red;
+}
+
+.flexdisplay{
+    display: flex;
+}
+
+.position{
+    position: sticky;
+                    top: 50px;
+                    left: 100px;
+}
+
+.centertext{
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 0 0 70px 0;
 }
