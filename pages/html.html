@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="description" content="Exemplo HTML">
+    <meta charset="keywords" content="exemplohtml, turmaads">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/introducao.css">
+    <script src="https://kit.fontawesome.com/b4b635e117.js" crossorigin="anonymous"></script>
+    <title>Exemplo HTML</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="./index.html">VOLTAR</a></li>
+            <li><a href="./html.html">HTML</a></li>
+            <li><a href="./css.html">CSS</a></li>
+            <li><a href="./js.html">JAVASCRIPT</a></li>
+            <li><a href="./react.html">REACT</a></li>
+            <li><a href="./nodejs.html">NODEJS</a></li>
+            <li><a href="./devops.html">DEVOPS</a></li>
+        </ul>
+    </nav>
+    <header id="cabecalho">
+        <h1>HTML - Básico</h1>
+    </header>
+    <!--------Estruturais---------->
+    <main>
+        <section>
+            <div>
+                <h1>Estruturais</h1>
+                <p>As tags estruturais são usadas para definir a estrutura básica de um documento HTML.</p>
+
+                <h2>1. </h2>
+                <p>Define o início e o fim de um documento HTML.</p>
+                <pre>
+        <code>
+        html
+            head
+                meta charset="UTF-8"
+                titleMeu Título/title
+            /head
+            body
+                pConteúdo da página./p
+            /body
+        /html
+        </code>
+
+        <hr>
+                </pre>
+                <h2>2. head</h2>
+                <p>Contém metadados, links para estilos, scripts e o título da página.</p>
+                <pre>
+        <code>
+        head
+            meta charset="UTF-8"
+            titleTítulo da Página/title
+            link rel="stylesheet" href="styles.css"
+            script src="script.js"/script
+        /head
+        </code>
+<hr>
+
+                </pre>
+
+                <h2>3. body</h2>
+                <p>Contém o conteúdo visível da página, como texto, imagens e vídeos.</p>
+                <pre>
+        <code>
+        body
+            h1Título Principal/h1
+            pEste é um parágrafo de exemplo./p
+        /body
+        </code>
+<hr>
+
+                </pre>
+
+                <h2>4. div</h2>
+                <p>Usado para agrupar blocos de conteúdo. Geralmente usado para estilização com CSS.</p>
+                <pre>
+        <code>
+        div class="container"
+            pEste é um bloco de conteúdo dentro de um div./p
+        /div
+        </code>
+<hr>
+
+                </pre>
+
+                <h2>5. span</h2>
+                <p>Usado para estilizar partes específicas de um texto sem quebrar a linha. Similar ao div, mas em nível
+                    inline.</p>
+                <pre>
+        <code>
+        pEste é um texto normal, mas span style="color: red;"este texto está em vermelho/span./p
+        </code>
+
+                </pre>
+            </div>
+        </section>
+        <!--------Textuais---------->
+        <section>
+            <div>
+                <h1>Textuais</h1>
+                <p>As tags textuais são usadas para formatar e estruturar o texto dentro de uma página HTML.</p>
+
+                <h2>1. h1 - h6</h2>
+                <p>Tags de cabeçalho que variam de h1 (mais importante) a h6 (menos importante).</p>
+                <pre>
+        <code>
+        h1Cabeçalho de Nível 1/h1
+        h2Cabeçalho de Nível 2/h2
+        h3Cabeçalho de Nível 3/h3
+        h4Cabeçalho de Nível 4/h4
+        h5Cabeçalho de Nível 5/h5
+        h6Cabeçalho de Nível 6/h6
+        </code>
+<hr>
+                </pre>
+
+                <h2>2. p</h2>
+                <p>Usado para definir um parágrafo de texto.</p>
+                <pre>
+        <code>
+        pEste é um parágrafo simples que contém algum texto para demonstração./p
+        </code>
+<hr>
+                </pre>
+
+                <h2>3. a</h2>
+                <p>Define um hiperlink, que pode ser usado para navegar para outra página ou parte da mesma página.</p>
+                <pre>
+        <code>
+        a href="https://exemplo.com" target="_blank"Clique aqui para visitar o exemplo.com/a
+        </code>
+<hr>
+                </pre>
+
+                <h2>4. strong</h2>
+                <p>Usado para enfatizar texto, geralmente exibido em negrito.</p>
+                <pre>
+        <code>
+        pAqui está um texto normal, mas strongeste texto está em negrito/strong./p
+        </code>
+<hr>
+                </pre>
+
+                <h2>5. em</h2>
+                <p>Usado para enfatizar texto, geralmente exibido em itálico.</p>
+                <pre>
+        <code>
+        pAqui está um texto normal, mas emeste texto está em itálico/em./p
+        </code>
+                </pre>
+            </div>
+        </section>
+        <!-------Midia----------->
+        <section>
+            <div>
+                <h1>Mídia</h1>
+                <p>As tags de mídia são usadas para incorporar imagens, áudio e vídeo em uma página HTML.</p>
+       
+                <h2>1. img</h2>
+                <p>Usado para exibir uma imagem. O atributo <code>src</code> define o caminho da imagem.</p>
+                <pre>
+        <code>
+        img src="imagem.jpg" alt="Descrição da imagem" width="200" height="150"
+        </code>
+
+                </pre>
+                <img src="https://th.bing.com/th/id/R.34339a52561ee1bfcb22321bfd27edc9?rik=VYdHjYbDf2013w&pid=ImgRaw&r=0" alt="Exemplo de imagem">
+                <hr>
+                <h2>2. Audio</h2>
+                <p>Usado para incorporar áudio. Pode incluir controles para reprodução.</p>
+                <pre>
+        <code>
+        audio controls
+            source src="audio.mp3" type="audio/mp3"
+        /audio
+        </code>
+
+                </pre>
+                <audio controls>
+                    <source src="/arquivos/musicShow.mp3" type="audio/ogg">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+                <hr>
+                <h2>3. Video</h2>
+                <p>Usado para incorporar vídeo. Pode incluir controles para reprodução.</p>
+                <pre>
+        <code>
+        video controls width="300"
+            source src="video.mp4" type="video/mp4"
+        /video
+        </code>
+
+                </pre>
+                <video controls width="300">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+        </section>
+        <!--------Formularios---------->
+        <section>
+            <div>
+                <h1>Formulários</h1>
+                <p>As tags de formulários são usadas para coletar informações do usuário.</p>
+         
+                <h2>1. form</h2>
+                <p>Define um formulário HTML que contém elementos de entrada (input) e botões.</p>
+                <pre>
+        <code>
+        form action="/enviar-dados" method="post"
+            label for="nome"Nome:/label
+            input type="text" id="nome" name="nome" required
+            br
+            label for="email"E-mail:/label
+            input type="email" id="email" name="email" required
+            br
+            button type="submit"Enviar/button
+        /form
+        </code>
+
+                </pre>
+                <p>Exemplo de como fica na página:</p>
+                <form action="/enviar-dados" method="post">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <br>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <button type="submit">Enviar</button>
+                </form>
+                <hr>
+                <h2>2. input</h2>
+                <p>Usado para criar diferentes tipos de elementos de entrada, como texto, senhas, emails, entre outros.</p>
+                <pre>
+        <code>
+        input type="text" name="usuario" placeholder="Digite seu nome de usuário"
+        input type="password" name="senha" placeholder="Digite sua senha"
+        input type="email" name="email" placeholder="Digite seu e-mail"
+        input type="checkbox" id="termos" name="termos"
+        label for="termos"Aceito os termos e condições/label
+        </code>
+
+                </pre>
+                <p>Exemplo de como fica na página:</p>
+                <input type="text" name="usuario" placeholder="Digite seu nome de usuário"><br>
+                <input type="password" name="senha" placeholder="Digite sua senha"><br>
+                <input type="email" name="email" placeholder="Digite seu e-mail"><br>
+                <input type="checkbox" id="termos" name="termos">
+                <label for="termos">Aceito os termos e condições</label>
+                <hr>
+                <h2>3. textarea</h2>
+                <p>Usado para criar uma área de texto onde o usuário pode inserir texto livremente.</p>
+                <pre>
+        <code>
+        textarea name="mensagem" rows="4" cols="50" placeholder="Digite sua mensagem aqui..."/textarea
+        </code>
+
+                </pre>
+                <p>Exemplo de como fica na página:</p>
+                <textarea name="mensagem" rows="4" cols="50" placeholder="Digite sua mensagem aqui..."></textarea>
+                <hr>
+                <h2>4. button</h2>
+                <p>Usado para criar um botão clicável que pode ser de envio de formulário ou para outras interações.</p>
+                <pre>
+        <code>
+        button type="button" onclick="alert('Botão clicado!')"Clique aqui/button
+        </code>
+
+                </pre>
+                <p>Exemplo de como fica na página:</p>
+                <button type="button" onclick="alert('Botão clicado!')">Clique aqui</button>
+                <hr>
+                <h2>5. select</h2>
+                <p>Usado para criar um menu suspenso de opções.</p>
+                <pre>
+        <code>
+        label for="carros"Escolha um carro:/label
+        select id="carros" name="carros"
+            option value="volkswagen"Volkswagen/option
+            option value="honda"Honda/option
+            option value="fiat"Fiat/option
+            option value="audi"Audi/option
+        /select
+        </code>
+                </pre>
+                <p>Exemplo de como fica na página:</p>
+                <label for="carros">Escolha um carro:</label>
+                <select id="carros" name="carros">
+                    <option value="volkswagen">Volkswagen</option>
+                    <option value="honda">Honda</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </div>
+        </section>
+
+        <!-------Tabelas----------->
+        <section>
+            <div>
+                <h1>Tabelas</h1>
+                <p>As tags de tabelas são usadas para exibir dados em formato de grade ou tabela.</p>
+         
+                <h2>1. table</h2>
+                <p>Define uma tabela HTML que contém linhas (tr) e células (td ou th).</p>
+                <pre>
+        <code>
+        table border="1"
+            tr
+                thNome/th
+                thIdade/th
+                thCidade/th
+            /tr
+            tr
+                tdJoão/td
+                td25/td
+                tdSão Paulo/td
+            /tr
+            tr
+                tdMaria/td
+                td30/td
+                tdRio de Janeiro/td
+            /tr
+        /table
+        </code>
+
+                </pre>
+                <p>Exemplo de como fica na página:</p>
+                <table border="1">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Cidade</th>
+                    </tr>
+                    <tr>
+                        <td>João</td>
+                        <td>25</td>
+                        <td>São Paulo</td>
+                    </tr>
+                    <tr>
+                        <td>Maria</td>
+                        <td>30</td>
+                        <td>Rio de Janeiro</td>
+                    </tr>
+                </table>
+                <hr>
+                <h2>2. tr</h2>
+                <p>Define uma linha em uma tabela.</p>
+                <pre>
+                    
+        <code>
+        tr
+            tdDados 1/td
+            tdDados 2/td
+        /tr
+        </code>
+
+                </pre>
+                <p>Exemplo de como fica na página:</p>
+                <table border="1">
+                    <tr>
+                        <td>Dados 1</td>
+                        <td>Dados 2</td>
+                    </tr>
+                </table>
+                <hr>
+                <h2>3. td</h2>
+                <p>Define uma célula de dados em uma tabela.</p>
+                <pre>
+        <code>
+        tdDados da Célula/td
+        </code>
+
+                </pre>
+                <p>Exemplo de como fica na página:</p>
+                <table border="1">
+                    <tr>
+                        <td>Dados da Célula</td>
+                    </tr>
+                </table>
+                <hr>
+                <h2>4. th</h2>
+                <p>Define uma célula de cabeçalho em uma tabela, que geralmente aparece em negrito e é centralizada.</p>
+                <pre>
+        <code>
+        thCabeçalho/th
+        </code>
+                </pre>
+                <p>Exemplo de como fica na página:</p>
+                <table border="1">
+                    <tr>
+                        <th>Cabeçalho</th>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!-------Semanticas----------->
+        <section>
+            <div>
+                <div>
+                    <h1>Semânticas</h1>
+                    <p>As tags semânticas são usadas para dar significado ao conteúdo de uma página HTML, melhorando a acessibilidade e SEO.</p>
+             
+                    <h2>1. header</h2>
+                    <p>Usado para definir o cabeçalho de uma página ou seção, geralmente contém o logotipo, menu de navegação ou título da página.</p>
+                    <pre>
+            <code>
+            header
+                h1Bem-vindo ao Meu Site/h1
+                nav
+                    a href="#home"Início/a
+                    a href="#sobre"Sobre/a
+                    a href="#contato"Contato/a
+                /nav
+            /header
+            </code>
+                    </pre>
+                    <p>Exemplo de como fica na página:</p>
+                    <header>
+                        <h1>Bem-vindo ao Meu Site</h1>
+                        <nav>
+                            <a href="#home">Início</a>
+                            <a href="#sobre">Sobre</a>
+                            <a href="#contato">Contato</a>
+                        </nav>
+                    </header>
+             <hr>
+                    <h2>2. footer</h2>
+                    <p>Usado para definir o rodapé de uma página ou seção, geralmente contém informações de direitos autorais, links de política de privacidade ou contatos.</p>
+                    <pre>
+            <code>
+            footer
+                p© Site dos Guri./p
+                p
+                    a href="https://facebook.com"Facebook/a |
+                    a href="https://twitter.com"Twitter/a
+                /p
+            /footer
+            </code>
+                    </pre>
+                    <p>Exemplo de como fica na página:</p>
+                    <div class="footer">
+                        <p>© Site dos Guri.</p>
+                        <p>
+                            <a href="https://facebook.com">Facebook</a> |
+                            <a href="https://twitter.com">Twitter</a>
+                        </p>
+                    </div>
+             <hr>
+                    <h2>3. article</h2>
+                    <p>Usado para definir um conteúdo independente e de relevância, como artigos de notícias, postagens de blog ou comentários.</p>
+                    <pre>
+            <code>
+            article
+                h2Título do Artigo/h2
+                pEste é o conteúdo do artigo. Pode incluir texto, imagens, vídeos, etc./p
+            /article
+            </code>
+                    </pre>
+                    <p>Exemplo de como fica na página:</p>
+                    <article>
+                        <h2>Título do Artigo</h2>
+                        <p>Este é o conteúdo do artigo. Pode incluir texto, imagens, vídeos, etc.</p>
+                    </article>
+             <hr>
+                    <h2>4. section</h2>
+                    <p>Usado para definir uma seção dentro de um documento. Pode conter cabeçalhos, artigos, e outras divisões de conteúdo.</p>
+                    <pre>
+            <code>
+            section
+                h2Seção Principal/h2
+                pEsta é uma seção do documento. Pode conter várias tags e conteúdo diverso./p
+            /section
+            </code>
+                    </pre>
+                    <p>Exemplo de como fica na página:</p>
+                    <section>
+                        <h2>Seção Principal</h2>
+                        <p>Esta é uma seção do documento. Pode conter várias tags e conteúdo diverso.</p>
+                    </section>
+             <hr>
+                    <h2>5. nav</h2>
+                    <p>Usado para definir uma seção de navegação que contém links para outras partes da página ou site.</p>
+                    <pre>
+            <code>
+            nav
+                ul
+                    li a href="#home"Início/a /li
+                    li a href="#servicos"Serviços/a /li
+                    li a href="#contato"Contato/a /li
+                /ul
+            /nav
+            </code>
+                    </pre>
+                    <p>Exemplo de como fica na página:</p>
+                    <nav>
+                        <ul>
+                            <li><a href="#home">Início</a></li>
+                            <li><a href="#servicos">Serviços</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+        </section>
+        <!------------------>
+
+        <!------------------>
+    </main>
+    <footer>
+        <div class="final">
+    <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-philippe-6b4421224/">João Vitor <i class="fa-brands fa-linkedin"></i></a></p>
+    <a href="www.linkedin.com/in/kauêoenningdemoura">Kauê de Moura <i class="fa-brands fa-linkedin"></i></a></p>
+    <a href="https://www.linkedin.com/in/fabr%C3%ADcio-cavalcante-correia-baab76227/">Fabricio Cavalcante <i class="fa-brands fa-linkedin"></i></a></p>
+</div>
+</footer>
+
+    <script>
+        const header = document.getElementById('cabecalho');
+        document.addEventListener('keydown', (e) => {
+            console.log(`Foi clicado na tecla: ${e.key}`)
+        });
+    </script>
+</body>
+
+</html>

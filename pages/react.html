@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Introdução ao React">
+    <meta name="keywords" content="React, componentes, hooks, JSX, React Router, Redux">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b4b635e117.js" crossorigin="anonymous"></script>
+    <title>Exemplo React</title>
+    <link rel="stylesheet" href="../style/css.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="./index.html">VOLTAR</a></li>
+            <li><a href="./html.html">HTML</a></li>
+            <li><a href="./css.html">CSS</a></li>
+            <li><a href="./js.html">JAVASCRIPT</a></li>
+            <li><a href="./react.html">REACT</a></li>
+            <li><a href="./nodejs.html">NODEJS</a></li>
+            <li><a href="./devops.html">DEVOPS</a></li>
+        </ul>
+    </nav>
+    <header id="cabecalho">
+        <h1>React - Básico</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Estrutura de Componentes</h2>
+            <p>React é baseado em <strong>componentes</strong>, que são pedaços reutilizáveis de código que representam partes da interface de usuário. Cada componente React é uma função JavaScript ou uma classe que retorna um pedaço da UI a ser renderizada. Eles permitem a criação de interfaces dinâmicas, compondo a aplicação em blocos menores e mais fáceis de gerenciar.</p>
+            <pre>
+                <code>
+function MeuComponente() {
+    return (
+        &lt;div&gt;
+            &lt;h1&gt;Olá, Mundo!&lt;/h1&gt;
+            &lt;p&gt;Este é um componente em React.&lt;/p&gt;
+        &lt;/div&gt;
+    );
+}
+                </code>
+            </pre>
+        </section>
+
+        <section>
+            <h2>2. Hooks: useState e useEffect</h2>
+            <p>Hooks são funções especiais que permitem o uso de estado e outros recursos do React em componentes funcionais. Os dois hooks mais usados são:</p>
+            
+            <h3>useState</h3>
+            <p>O <code>useState</code> permite adicionar estado a um componente funcional. Ele retorna um valor de estado e uma função para atualizá-lo.</p>
+            <pre>
+                <code>
+import React, { useState } from 'react';
+
+function Contador() {
+    const [contador, setContador] = useState(0);
+
+    return (
+        &lt;div&gt;
+            &lt;p&gt;Contador: {contador}&lt;/p&gt;
+            &lt;button onClick={() => setContador(contador + 1)}&gt;Incrementar&lt;/button&gt;
+        &lt;/div&gt;
+    );
+}
+                </code>
+            </pre>
+
+            <h3>useEffect</h3>
+            <p>O <code>useEffect</code> permite executar efeitos colaterais em componentes, como buscar dados de uma API ou configurar um intervalo. Ele é executado após a renderização e pode depender de variáveis específicas.</p>
+            <pre>
+                <code>
+import React, { useEffect } from 'react';
+
+function ExemploEfeito() {
+    useEffect(() => {
+        console.log('O componente foi montado');
+
+        return () => {
+            console.log('O componente foi desmontado');
+        };
+    }, []);
+
+    return &lt;div&gt;Veja o console para o efeito&lt;/div&gt;;
+}
+                </code>
+            </pre>
+        </section>
+
+        <section>
+            <h2>3. JSX</h2>
+            <p>JSX é uma extensão de sintaxe para JavaScript que permite escrever código similar ao HTML dentro do JavaScript. Ele facilita a criação de interfaces em React, permitindo misturar lógica JavaScript com elementos HTML de forma clara e concisa.</p>
+            <pre>
+                <code>
+import React from 'react';
+
+function Saudacao() {
+    const nome = 'João';
+    return &lt;h1&gt;Olá, {nome}!&lt;/h1&gt;;
+}
+                </code>
+            </pre>
+        </section>
+
+        <section>
+            <h2>4. Navegação com react-router-dom</h2>
+            <p>O <strong>React Router</strong> é uma biblioteca que permite navegação entre páginas em uma aplicação React. Com ele, podemos definir rotas que renderizam diferentes componentes.</p>
+            <pre>
+                <code>
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+
+function App() {
+    return (
+        &lt;Router&gt;
+            &lt;nav&gt;
+                &lt;Link to="/"&gt;Home&lt;/Link&gt;
+                &lt;Link to="/sobre"&gt;Sobre&lt;/Link&gt;
+            &lt;/nav&gt;
+
+            &lt;Switch&gt;
+                &lt;Route exact path="/" component={Home} /&gt;
+                &lt;Route path="/sobre" component={Sobre} /&gt;
+            &lt;/Switch&gt;
+        &lt;/Router&gt;
+    );
+}
+
+function Home() {
+    return &lt;h1&gt;Página Inicial&lt;/h1&gt;;
+}
+
+function Sobre() {
+    return &lt;h1&gt;Sobre Nós&lt;/h1&gt;;
+}
+                </code>
+            </pre>
+        </section>
+
+        <section>
+            <h2>5. Gerenciamento de Estado Global: Redux e Context API</h2>
+            <p>Para gerenciar o estado em toda a aplicação, o React permite a integração com bibliotecas como <strong>Redux</strong> ou <strong>Context API</strong>. Isso é útil em aplicativos maiores onde muitos componentes precisam acessar e atualizar o mesmo estado.</p>
+
+            <h3>Context API</h3>
+            <p>O <code>Context API</code> é uma ferramenta interna do React para compartilhar dados entre componentes sem a necessidade de passar props manualmente em cada nível.</p>
+            <pre>
+                <code>
+import React, { createContext, useContext, useState } from 'react';
+
+const TemaContexto = createContext();
+
+function App() {
+    const [tema, setTema] = useState('claro');
+
+    return (
+        &lt;TemaContexto.Provider value={{ tema, setTema }}&gt;
+            &lt;MinhaPagina /&gt;
+        &lt;/TemaContexto.Provider&gt;
+    );
+}
+
+function MinhaPagina() {
+    const { tema, setTema } = useContext(TemaContexto);
+
+    return (
+        &lt;div style={{ backgroundColor: tema === 'claro' ? '#fff' : '#333' }}&gt;
+            &lt;p&gt;Tema atual: {tema}&lt;/p&gt;
+            &lt;button onClick={() => setTema(tema === 'claro' ? 'escuro' : 'claro')}&gt;Mudar Tema&lt;/button&gt;
+        &lt;/div&gt;
+    );
+}
+                </code>
+            </pre>
+        </section>
+        <br>
+        <br>
+    </main>
+
+    <footer>
+        <div class="final">
+    <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-philippe-6b4421224/">João Vitor <i class="fa-brands fa-linkedin"></i></a></p>
+    <a href="www.linkedin.com/in/kauêoenningdemoura">Kauê de Moura <i class="fa-brands fa-linkedin"></i></a></p>
+    <a href="https://www.linkedin.com/in/fabr%C3%ADcio-cavalcante-correia-baab76227/">Fabricio Cavalcante <i class="fa-brands fa-linkedin"></i></a></p>
+</div>
+</footer>
+</body>
+
+</html>

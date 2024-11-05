@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Exemplo HTML">
+    <meta name="keywords" content="exemplohtml, turmaads">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/css.css">
+    <script src="https://kit.fontawesome.com/b4b635e117.js" crossorigin="anonymous"></script>
+
+    <title>Exemplo HTML</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="./index.html">VOLTAR</a></li>
+            <li><a href="./html.html">HTML</a></li>
+            <li><a href="./css.html">CSS</a></li>
+            <li><a href="./js.html">JAVASCRIPT</a></li>
+            <li><a href="./react.html">REACT</a></li>
+            <li><a href="./nodejs.html">NODEJS</a></li>
+            <li><a href="./devops.html">DEVOPS</a></li>
+        </ul>
+    </nav>
+    <header id="cabecalho">
+        <h1>CSS - Básico</h1>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <h1>Propriedades de CSS</h1>
+                <p>As propriedades de CSS são usadas para controlar o layout e a aparência dos elementos em uma página web.</p>
+
+                <h2>1. color</h2>
+                <p>Define a cor do texto de um elemento.</p>
+                <pre>
+                <code>
+                p {
+                    color: blue;
+                }
+                </code>
+                </pre>
+                <p class="azul">Este texto é azul.</p>
+                <hr>
+
+                <h2>2. background-color</h2>
+                <p>Define a cor de fundo de um elemento.</p>
+                <pre>
+                <code>
+                div {
+                    background-color: yellow;
+                }
+                </code>
+                </pre>
+                <div class="amarelo">Este div tem fundo amarelo.</div>
+                <hr>
+
+                <h2>3. font-size</h2>
+                <p>Controla o tamanho da fonte de um texto.</p>
+                <pre>
+                <code>
+                h1 {
+                    font-size: 24px;
+                }
+                </code>
+                </pre>
+                <h1 class="size24">Este é um título com tamanho de fonte 24px.</h1>
+                <hr>
+
+                <h2>4. margin</h2>
+                <p>Define o espaço externo ao redor de um elemento.</p>
+                <pre>
+                <code>
+                div {
+                    margin: 20px;
+                }
+                </code>
+                </pre>
+                <div class="margin20">Este div tem uma margem de 20px ao redor.</div>
+                <hr>
+
+                <h2>5. padding</h2>
+                <p>Define o espaço interno entre o conteúdo de um elemento e suas bordas.</p>
+                <pre>
+                <code>
+                div {
+                    padding: 15px;
+                }
+                </code>
+                </pre>
+                <div class="padding15">Este div tem um padding de 15px.</div>
+                <hr>
+
+                <h2>6. border</h2>
+                <p>Define as bordas ao redor de um elemento.</p>
+                <pre>
+                <code>
+                p {
+                    border: 2px solid red;
+                }
+                </code>
+                </pre>
+                <p class="borderred">Este parágrafo tem uma borda vermelha.</p>
+                <hr>
+
+                <h2>7. display</h2>
+                <p>Controla o comportamento de exibição de um elemento. Pode ser <code>block</code>, <code>inline</code>, <code>flex</code>, entre outros.</p>
+                <pre>
+                <code>
+                div {
+                    display: flex;
+                }
+                </code>
+                </pre>
+                <div class="flexdisplay">
+                    <div class="item1">Item 1</div>
+                    <div class="item2">Item 2</div>
+                </div>
+                <hr>
+
+                <h2>8. position</h2>
+                <p>Define o método de posicionamento de um elemento. Pode ser <code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code> ou <code>sticky</code>.</p>
+                <pre>
+                <code>
+                div {
+                    position: absolute;
+                    top: 50px;
+                    left: 100px;
+                }
+                </code>
+                </pre>
+                <div class="position">Este div está posicionado absolutamente.</div>
+                <hr>
+
+                <h2>9. text-align</h2>
+                <p>Controla o alinhamento do texto dentro de um elemento. Pode ser <code>left</code>, <code>right</code>, <code>center</code>, ou <code>justify</code>.</p>
+                <pre>
+                <code>
+                p {
+                    text-align: center;
+                }
+                </code>
+                </pre>
+                <p class="centertext">Este texto está centralizado.</p>
+                <hr>
+
+                <h2>10. width e height</h2>
+                <p>Definem a largura e a altura de um elemento.</p>
+                <pre>
+                <code>
+                img {
+                    width: 200px;
+                    height: auto;
+                }
+                </code>
+                </pre>
+                <img src="/arquivos/200x200.png" alt="">
+                <hr>
+
+                <h2>11. flex</h2>
+                <p>Usado em conjunto com <code>display: flex</code>, define o crescimento, encolhimento e base do tamanho dos itens flexíveis.</p>
+                <pre>
+                <code>
+                div {
+                    display: flex;
+                }
+                div.item {
+                    flex: 1;
+                }
+                </code>
+                </pre>
+                <div class="flexdisplay">
+                    <div class="flex-item1">Item 1</div>
+                    <div class="flex-item2">Item 2</div>
+                </div>
+                <hr>
+
+                <h2>12. grid</h2>
+                <p>Define um layout de grade para posicionar elementos em linhas e colunas.</p>
+                <pre>
+                <code>
+                div {
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                }
+                </code>
+                </pre>
+                <div class="grid">
+                    <div class="grid-item1">Coluna 1</div>
+                    <div class="grid-item2">Coluna 2</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="final">
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-philippe-6b4421224/">João Vitor <i class="fa-brands fa-linkedin"></i></a></p>
+            <a href="www.linkedin.com/in/kauêoenningdemoura">Kauê de Moura <i class="fa-brands fa-linkedin"></i></a></p>
+            <a href="https://www.linkedin.com/in/fabr%C3%ADcio-cavalcante-correia-baab76227/">Fabricio Cavalcante <i class="fa-brands fa-linkedin"></i></a></p>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('cabecalho');
+        document.addEventListener('keydown', (e) => {
+            console.log(`Foi clicado na tecla: ${e.key}`)
+        });
+    </script>
+</body>
+
+</html>
