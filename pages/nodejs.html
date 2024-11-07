@@ -1,175 +1,260 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Introdução ao React">
-        <meta name="keywords" content="React, componentes, hooks, JSX, React Router, Redux">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/b4b635e117.js" crossorigin="anonymous"></script>
-        <title>Exemplo NodeJs</title>
-        <link rel="stylesheet" href="../style/css.css">
-    </head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Introdução ao React" />
+    <meta
+      name="keywords"
+      content="React, componentes, hooks, JSX, React Router, Redux"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b4b635e117.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Exemplo NodeJs</title>
+    <link rel="stylesheet" href="../style/introducao.css" />
+  </head>
+  <body>
     <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="./index.html">VOLTAR</a></li>
-            <li><a href="./html.html">HTML</a></li>
-            <li><a href="./css.html">CSS</a></li>
-            <li><a href="./js.html">JAVASCRIPT</a></li>
-            <li><a href="./react.html">REACT</a></li>
-            <li><a href="./nodejs.html">NODEJS</a></li>
-            <li><a href="./devops.html">DEVOPS</a></li>
-        </ul>
+      <ul class="nav-links">
+        <li><a href="./index.html">VOLTAR</a></li>
+        <li><a href="./html.html">HTML</a></li>
+        <li><a href="./css.html">CSS</a></li>
+        <li><a href="./js.html">JAVASCRIPT</a></li>
+        <li><a href="./react.html">REACT</a></li>
+        <li><a href="./nodejs.html">NODEJS</a></li>
+        <li><a href="./devops.html">DEVOPS</a></li>
+      </ul>
     </nav>
     <header id="cabecalho">
-        <h1>NodeJs - Básico</h1>
+      <h1>NodeJs - Básico</h1>
     </header>
 
     <main>
-        <section>
-            <h2>O papel do Node.js no Backend</h2>
-            <p>
-                O Node.js é uma plataforma construída sobre o motor de execução JavaScript do Chrome, o V8. 
-                Ele permite criar servidores eficientes e escaláveis, graças ao seu modelo de execução assíncrono e orientado a eventos. 
-                Isso significa que o Node.js é excelente para aplicações em tempo real e altamente escaláveis.
-            </p>
-        </section>
+      <section>
+          <h2>O papel do Node.js no Backend</h2>
+          <p>
+            O Node.js é uma plataforma construída sobre o motor de execução
+            JavaScript do Chrome, o V8. Ele permite criar servidores eficientes
+            e escaláveis, graças ao seu modelo de execução assíncrono e
+            orientado a eventos. Isso significa que o Node.js é excelente para
+            aplicações em tempo real e altamente escaláveis.
+          </p>
+      </section>
 
-        <section>
-            <h2>Utilização de Módulos Principais</h2>
-            <p>
-                Node.js possui diversos módulos nativos que ajudam a criar funcionalidades de servidor. Abaixo estão alguns dos principais módulos:
-            </p>
+      <section>
+        <h2>Utilização de Módulos Principais</h2>
+        <button onclick="modal2.showModal()">Ver Página Utilização de Módulos Principais</button>
+        <dialog id="modal2">
+          <button class="close-button" onclick="modal2.close()">✕</button>
+          <h2>Utilização de Módulos Principais</h2>
+          <p>
+            Node.js possui diversos módulos nativos que ajudam a criar
+            funcionalidades de servidor. Abaixo estão alguns dos principais
+            módulos:
+          </p>
 
-            <h3>Módulo HTTP</h3>
-            <p>Este módulo permite criar e manipular servidores HTTP:</p>
-            <code>
-                const http = require('http');<br>
-                const server = http.createServer((req, res) => {<br>
-                &nbsp;&nbsp;res.writeHead(200, {'Content-Type': 'text/plain'});<br>
-                &nbsp;&nbsp;res.end('Hello World');<br>
-                });<br>
-                server.listen(3000, () => console.log('Servidor rodando na porta 3000'));
-            </code>
+          <h3>Módulo HTTP</h3>
+          <p>Este módulo permite criar e manipular servidores HTTP:</p>
+          <code>
+            const http = require('http');<br />
+            const server = http.createServer((req, res) => {<br />
+            &nbsp;&nbsp;res.writeHead(200, {'Content-Type': 'text/plain'});<br />
+            &nbsp;&nbsp;res.end('Hello World');<br />
+            });<br />
+            server.listen(3000, () => console.log('Servidor rodando na porta
+            3000'));
+          </code>
 
-            <h3>Módulo FS</h3>
-            <p>Este módulo permite manipular o sistema de arquivos (File System):</p>
-            <code>
-                const fs = require('fs');<br>
-                fs.readFile('arquivo.txt', 'utf8', (err, data) => {<br>
-                &nbsp;&nbsp;if (err) throw err;<br>
-                &nbsp;&nbsp;console.log(data);<br>
-                });
-            </code>
+          <h3>Módulo FS</h3>
+          <p>
+            Este módulo permite manipular o sistema de arquivos (File System):
+          </p>
+          <code>
+            const fs = require('fs');<br />
+            fs.readFile('arquivo.txt', 'utf8', (err, data) => {<br />
+            &nbsp;&nbsp;if (err) throw err;<br />
+            &nbsp;&nbsp;console.log(data);<br />
+            });
+          </code>
 
-            <h3>Módulo PATH</h3>
-            <p>Este módulo ajuda a manipular e resolver caminhos de arquivos:</p>
-            <code>
-                const path = require('path');<br>
-                const caminhoCompleto = path.join(__dirname, 'arquivos', 'imagem.png');<br>
-                console.log(caminhoCompleto);
-            </code>
-        </section>
+          <h3>Módulo PATH</h3>
+          <p>Este módulo ajuda a manipular e resolver caminhos de arquivos:</p>
+          <code>
+            const path = require('path');<br />
+            const caminhoCompleto = path.join(__dirname, 'arquivos',
+            'imagem.png');<br />
+            console.log(caminhoCompleto);
+          </code>
+          <hr />
+          <button onclick="modal2.close()">Fechar Modal</button>
+        </dialog>
+      </section>
 
-        <section>
-            <h2>Estrutura de um Aplicativo Express.js</h2>
-            <p>
-                Express.js é um framework web minimalista que facilita o desenvolvimento com Node.js, 
-                proporcionando uma estrutura flexível para criação de aplicações e APIs.
-            </p>
+      <section>
+        <h2>Estrutura de um Aplicativo Express.js</h2>
+        <button onclick="modal3.showModal()">Ver Página Estrutura de um Aplicativo Express.js</button>
+        <dialog id="modal3">
+          <button class="close-button" onclick="modal3.close()">✕</button>
+          <h2>Estrutura de um Aplicativo Express.js</h2>
+          <p>
+            Express.js é um framework web minimalista que facilita o
+            desenvolvimento com Node.js, proporcionando uma estrutura flexível
+            para criação de aplicações e APIs.
+          </p>
 
-            <h3>Configurando um Servidor Express</h3>
-            <code>
-                const express = require('express');<br>
-                const app = express();<br>
-                const PORT = 3000;<br>
-                <br>
-                app.get('/', (req, res) => {<br>
-                &nbsp;&nbsp;res.send('Bem-vindo ao servidor Express!');<br>
-                });<br>
-                <br>
-                app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
-            </code>
+          <h3>Configurando um Servidor Express</h3>
+          <code>
+            const express = require('express');<br />
+            const app = express();<br />
+            const PORT = 3000;<br />
+            <br />
+            app.get('/', (req, res) => {<br />
+            &nbsp;&nbsp;res.send('Bem-vindo ao servidor Express!');<br />
+            });<br />
+            <br />
+            app.listen(PORT, () => console.log(`Servidor rodando na porta
+            ${PORT}`));
+          </code>
 
-            <h3>Criando Rotas</h3>
-            <p>
-                Em um servidor Express, você pode definir várias rotas para diferentes requisições HTTP:
-            </p>
-            <code>
-                app.get('/usuarios', (req, res) => {<br>
-                &nbsp;&nbsp;res.send('Listando todos os usuários');<br>
-                });<br>
-                <br>
-                app.post('/usuarios', (req, res) => {<br>
-                &nbsp;&nbsp;res.send('Criando um novo usuário');<br>
-                });
-            </code>
-        </section>
+          <h3>Criando Rotas</h3>
+          <p>
+            Em um servidor Express, você pode definir várias rotas para
+            diferentes requisições HTTP:
+          </p>
+          <code>
+            app.get('/usuarios', (req, res) => {<br />
+            &nbsp;&nbsp;res.send('Listando todos os usuários');<br />
+            });<br />
+            <br />
+            app.post('/usuarios', (req, res) => {<br />
+            &nbsp;&nbsp;res.send('Criando um novo usuário');<br />
+            });
+          </code>
+          <hr />
+          <button onclick="modal3.close()">Fechar Modal</button>
+        </dialog>
+      </section>
 
-        <section>
-            <h2>Integração com Banco de Dados</h2>
-            <p>Node.js permite integração com diversos bancos de dados usando bibliotecas. Aqui estão dois exemplos populares:</p>
+      <section>
+        <h2>Integração com Banco de Dados</h2>
+        <button onclick="modal4.showModal()">Ver Página Integração com Banco de Dados</button>
+        <dialog id="modal4">
+          <button class="close-button" onclick="modal4.close()">✕</button>
+          <h2>Integração com Banco de Dados</h2>
+          <p>
+            Node.js permite integração com diversos bancos de dados usando
+            bibliotecas. Aqui estão dois exemplos populares:
+          </p>
 
-            <h3>Integração com MongoDB usando Mongoose</h3>
-            <code>
-                const mongoose = require('mongoose');<br>
-                mongoose.connect('mongodb://localhost:27017/meuBanco', { useNewUrlParser: true, useUnifiedTopology: true });<br>
-                <br>
-                const Usuario = mongoose.model('Usuario', { nome: String, idade: Number });<br>
-                const novoUsuario = new Usuario({ nome: 'João', idade: 25 });<br>
-                <br>
-                novoUsuario.save().then(() => console.log('Usuário salvo!'));
-            </code>
+          <h3>Integração com MongoDB usando Mongoose</h3>
+          <code>
+            const mongoose = require('mongoose');<br />
+            mongoose.connect('mongodb://localhost:27017/meuBanco', {
+            useNewUrlParser: true, useUnifiedTopology: true });<br />
+            <br />
+            const Usuario = mongoose.model('Usuario', { nome: String, idade:
+            Number });<br />
+            const novoUsuario = new Usuario({ nome: 'João', idade: 25 });<br />
+            <br />
+            novoUsuario.save().then(() => console.log('Usuário salvo!'));
+          </code>
 
-            <h3>Integração com PostgreSQL usando Sequelize</h3>
-            <code>
-                const { Sequelize, DataTypes } = require('sequelize');<br>
-                const sequelize = new Sequelize('postgres://usuario:senha@localhost:5432/meuBanco');<br>
-                <br>
-                const Usuario = sequelize.define('Usuario', {<br>
-                &nbsp;&nbsp;nome: DataTypes.STRING,<br>
-                &nbsp;&nbsp;idade: DataTypes.INTEGER<br>
-                });<br>
-                <br>
-                sequelize.sync().then(() => console.log('Tabela criada!'));
-            </code>
-        </section>
+          <h3>Integração com PostgreSQL usando Sequelize</h3>
+          <code>
+            const { Sequelize, DataTypes } = require('sequelize');<br />
+            const sequelize = new
+            Sequelize('postgres://usuario:senha@localhost:5432/meuBanco');<br />
+            <br />
+            const Usuario = sequelize.define('Usuario', {<br />
+            &nbsp;&nbsp;nome: DataTypes.STRING,<br />
+            &nbsp;&nbsp;idade: DataTypes.INTEGER<br />
+            });<br />
+            <br />
+            sequelize.sync().then(() => console.log('Tabela criada!'));
+          </code>
+          <hr />
+          <button onclick="modal4.close()">Fechar Modal</button>
+        </dialog>
+      </section>
 
-        <section>
-            <h2>Práticas de Segurança</h2>
-            <p>
-                A segurança é fundamental no desenvolvimento de back-end. Utilizar middlewares para autenticação e autorização ajuda a proteger suas rotas.
-            </p>
+      <section>
+        <h2>Práticas de Segurança</h2>
+        <button onclick="modal5.showModal()">Ver Página Práticas de Segurança</button>
+        <dialog id="modal5">
+          <button class="close-button" onclick="modal5.close()">✕</button>
+          <h2>Práticas de Segurança</h2>
+          <p>
+            A segurança é fundamental no desenvolvimento de back-end. Utilizar
+            middlewares para autenticação e autorização ajuda a proteger suas
+            rotas.
+          </p>
 
-            <h3>Middleware de Autenticação</h3>
-            <p>Um exemplo básico de middleware para verificar autenticação:</p>
-            <code>
-                function autenticar(req, res, next) {<br>
-                &nbsp;&nbsp;if (req.isAuthenticated()) {<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;return next();<br>
-                &nbsp;&nbsp;}<br>
-                &nbsp;&nbsp;res.status(401).send('Acesso negado');<br>
-                }<br>
-                <br>
-                app.use('/rotaProtegida', autenticar, (req, res) => {<br>
-                &nbsp;&nbsp;res.send('Acesso concedido');<br>
-                });
-            </code>
-            <br>
-            <br>
-            <br>
-            <br>
-        </section>
+          <h3>Middleware de Autenticação</h3>
+          <p>Um exemplo básico de middleware para verificar autenticação:</p>
+          <code>
+            function autenticar(req, res, next) {<br />
+            &nbsp;&nbsp;if (req.isAuthenticated()) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;return next();<br />
+            &nbsp;&nbsp;}<br />
+            &nbsp;&nbsp;res.status(401).send('Acesso negado');<br />
+            }<br />
+            <br />
+            app.use('/rotaProtegida', autenticar, (req, res) => {<br />
+            &nbsp;&nbsp;res.send('Acesso concedido');<br />
+            });
+          </code>
+          <hr />
+          <button onclick="modal5.close()">Fechar Modal</button>
+        </dialog>
+      </section>
     </main>
 
     <footer>
-        <div class="final">
-    <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-philippe-6b4421224/">João Vitor <i class="fa-brands fa-linkedin"></i></a></p>
-    <a href="www.linkedin.com/in/kauêoenningdemoura">Kauê de Moura <i class="fa-brands fa-linkedin"></i></a></p>
-    <a href="https://www.linkedin.com/in/fabr%C3%ADcio-cavalcante-correia-baab76227/">Fabricio Cavalcante <i class="fa-brands fa-linkedin"></i></a></p>
-</div>
-</footer>
+      <div class="final">
+        <a
+          href="https://www.linkedin.com/in/jo%C3%A3o-vitor-philippe-6b4421224/"
+          >João Vitor <i class="fa-brands fa-linkedin"></i
+        ></a>
+        <p>
+          <a href="www.linkedin.com/in/kauêoenningdemoura"
+            >Kauê de Moura <i class="fa-brands fa-linkedin"></i
+          ></a>
+        </p>
+        <p>
+          <a
+            href="https://www.linkedin.com/in/fabr%C3%ADcio-cavalcante-correia-baab76227/"
+            >Fabricio Cavalcante <i class="fa-brands fa-linkedin"></i
+          ></a>
+        </p>
+        <p></p>
+      </div>
+    </footer>
 
-</body>
+    <script>
+      const modals = [
+        "modal",
+        "modal2",
+        "modal3",
+        "modal4",
+        "modal5",
+        "modal6",
+      ];
+      modals.forEach((modalId) => {
+        const modal = document.getElementById(modalId);
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.close();
+          }
+        });
+      });
+
+      const header = document.getElementById("cabecalho");
+      document.addEventListener("keydown", (e) => {
+        console.log(`Foi clicado na tecla: ${e.key}`);
+      });
+    </script>
+    <br>
+  </body>
 </html>

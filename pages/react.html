@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b4b635e117.js" crossorigin="anonymous"></script>
     <title>Exemplo React</title>
-    <link rel="stylesheet" href="../style/css.css">
+    <link rel="stylesheet" href="../style/introducao.css">
 </head>
 
 <body>
@@ -30,6 +30,10 @@
     <main>
         <section>
             <h2>1. Estrutura de Componentes</h2>
+            <button onclick="modal.showModal()">Ver página Estrutura de Componentes</button>
+          <dialog id="modal">
+            <button class="close-button" onclick="modal.close()">✕</button>
+            <h2>1. Estrutura de Componentes</h2>
             <p>React é baseado em <strong>componentes</strong>, que são pedaços reutilizáveis de código que representam partes da interface de usuário. Cada componente React é uma função JavaScript ou uma classe que retorna um pedaço da UI a ser renderizada. Eles permitem a criação de interfaces dinâmicas, compondo a aplicação em blocos menores e mais fáceis de gerenciar.</p>
             <pre>
                 <code>
@@ -43,9 +47,16 @@ function MeuComponente() {
 }
                 </code>
             </pre>
+            <hr>
+            <button onclick="modal.close()">Fechar Modal</button>
+        </dialog>
         </section>
 
         <section>
+            <h2>2. Hooks: useState e useEffect</h2>
+            <button onclick="modal2.showModal()">Ver página Estrutura de Componentes</button>
+            <dialog id="modal2">
+              <button class="close-button" onclick="modal2.close()">✕</button>
             <h2>2. Hooks: useState e useEffect</h2>
             <p>Hooks são funções especiais que permitem o uso de estado e outros recursos do React em componentes funcionais. Os dois hooks mais usados são:</p>
             
@@ -67,6 +78,8 @@ function Contador() {
 }
                 </code>
             </pre>
+            <hr>
+
 
             <h3>useEffect</h3>
             <p>O <code>useEffect</code> permite executar efeitos colaterais em componentes, como buscar dados de uma API ou configurar um intervalo. Ele é executado após a renderização e pode depender de variáveis específicas.</p>
@@ -87,9 +100,16 @@ function ExemploEfeito() {
 }
                 </code>
             </pre>
+            <hr>
+            <button onclick="modal2.close()">Fechar Modal</button>
+        </dialog>
         </section>
 
         <section>
+            <h2>3. JSX</h2>
+            <button onclick="modal4.showModal()">Ver página JSX</button>
+          <dialog id="modal4">
+            <button class="close-button" onclick="modal4.close()">✕</button>
             <h2>3. JSX</h2>
             <p>JSX é uma extensão de sintaxe para JavaScript que permite escrever código similar ao HTML dentro do JavaScript. Ele facilita a criação de interfaces em React, permitindo misturar lógica JavaScript com elementos HTML de forma clara e concisa.</p>
             <pre>
@@ -102,9 +122,16 @@ function Saudacao() {
 }
                 </code>
             </pre>
+            <hr />
+            <button onclick="modal4.close()">Fechar Modal</button>
+          </dialog>
         </section>
 
         <section>
+            <h2>4. Navegação com react-router-dom</h2>
+            <button onclick="modal5.showModal()">Ver página Navegação com react-router-dom</button>
+          <dialog id="modal5">
+            <button class="close-button" onclick="modal5.close()">✕</button>
             <h2>4. Navegação com react-router-dom</h2>
             <p>O <strong>React Router</strong> é uma biblioteca que permite navegação entre páginas em uma aplicação React. Com ele, podemos definir rotas que renderizam diferentes componentes.</p>
             <pre>
@@ -137,9 +164,16 @@ function Sobre() {
 }
                 </code>
             </pre>
+            <hr />
+            <button onclick="modal5.close()">Fechar Modal</button>
+          </dialog>
         </section>
 
         <section>
+            <h2>5. Gerenciamento de Estado Global: Redux e Context API</h2>
+            <button onclick="modal6.showModal()">Ver página Gerenciamento de Estado Global: Redux e Context API</button>
+          <dialog id="modal6">
+            <button class="close-button" onclick="modal6.close()">✕</button>
             <h2>5. Gerenciamento de Estado Global: Redux e Context API</h2>
             <p>Para gerenciar o estado em toda a aplicação, o React permite a integração com bibliotecas como <strong>Redux</strong> ou <strong>Context API</strong>. Isso é útil em aplicativos maiores onde muitos componentes precisam acessar e atualizar o mesmo estado.</p>
 
@@ -173,9 +207,10 @@ function MinhaPagina() {
 }
                 </code>
             </pre>
+            <hr />
+            <button onclick="modal6.close()">Fechar Modal</button>
+          </dialog>
         </section>
-        <br>
-        <br>
     </main>
 
     <footer>
@@ -185,6 +220,29 @@ function MinhaPagina() {
     <a href="https://www.linkedin.com/in/fabr%C3%ADcio-cavalcante-correia-baab76227/">Fabricio Cavalcante <i class="fa-brands fa-linkedin"></i></a></p>
 </div>
 </footer>
+<script>
+    const modals = [
+      "modal2",
+      "modal3",
+      "modal4",
+      "modal5",
+      "modal6",
+    ];
+    modals.forEach((modalId) => {
+      const modal = document.getElementById(modalId);
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.close();
+        }
+      });
+    });
+
+    const header = document.getElementById("cabecalho");
+    document.addEventListener("keydown", (e) => {
+      console.log(`Foi clicado na tecla: ${e.key}`);
+    });
+  </script>
+  <hr>
 </body>
 
 </html>
