@@ -32,3 +32,21 @@ Esta parte descreve as principais funcionalidades e usos do JavaScript no front-
 - **Eventos**: `addEventListener`, eventos comuns como `click`, `submit`, `mouseover`, `keydown`
 - **Manipulação de Dados**: Arrays (`map`, `filter`, `reduce`), Objetos (criação e acesso), Funções (declaração, expressão, arrow functions)
 - **Fetch API**: `fetch`, Promises, Async/Await
+
+### 4. React
+
+Esta parte explica a estrutura de componentes e como eles são utilizados para criar interfaces de usuário dinâmicas.
+
+- **Hooks**: `useState` e `useEffect`.
+- **JSX**: A importância do JSX, uma sintaxe que permite escrever código semelhante ao HTML dentro de arquivos JavaScript, tornando a criação de componentes mais intuitiva e legível.
+- **react-router-dom**: Como usar o `react-router-dom` para permitir a navegação entre diferentes páginas ou componentes dentro de uma aplicação React, sem a necessidade de recarregar a página inteira.
+- **Gerenciamento de Estado Global**: Aborda como integrar soluções como a `Context API` ou Redux para gerenciar estado global, explicando as diferenças entre ambas as abordagens e quando utilizá-las.
+
+### 5. Node.js
+
+Esta parte descreve o papel do Node.js no backend e como ele permite a criação de servidores eficientes e escaláveis.
+
+- **Módulos principais**: Módulos principais do Node.js, como `http`, `fs`, e `path`, e como eles podem ser usados para criar servidores básicos e manipular arquivos e caminhos no servidor.
+- **Express.js**:  Uso do Express.js, um framework que facilita a criação de APIs e servidores HTTP em Node.js. O usuário aprende a criar rotas para lidar com requisições e respostas.
+- **Integração com Bancos de Dados**: Integração do Node.js com bancos de dados como MongoDB e PostgreSQL, utilizando bibliotecas como Mongoose e Sequelize para facilitar a manipulação de dados.
+- **Práticas de Segurança**: A importância de aplicar práticas de segurança em aplicações Node.js, como autenticação e autorização, utilizando middlewares para proteger rotas sensíveis e garantir a segurança dos dados dos usuários.
