@@ -1,44 +1,267 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Introdução ao React">
-    <meta name="keywords" content="React, componentes, hooks, JSX, React Router, Redux">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/b4b635e117.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Introdução ao React" />
+    <meta
+      name="keywords"
+      content="React, componentes, hooks, JSX, React Router, Redux"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b4b635e117.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Exemplo DevOps</title>
-    <link rel="stylesheet" href="../style/introducao.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="../style/introducao.css" />
+  </head>
+  <body>
     <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="./index.html">VOLTAR</a></li>
-            <li><a href="./html.html">HTML</a></li>
-            <li><a href="./css.html">CSS</a></li>
-            <li><a href="./js.html">JAVASCRIPT</a></li>
-            <li><a href="./react.html">REACT</a></li>
-            <li><a href="./nodejs.html">NODEJS</a></li>
-            <li><a href="./devops.html">DEVOPS</a></li>
-        </ul>
+      <ul class="nav-links">
+        <li><a href="../index.html">VOLTAR</a></li>
+        <li><a href="./html.html">HTML</a></li>
+        <li><a href="./css.html">CSS</a></li>
+        <li><a href="./js.html">JAVASCRIPT</a></li>
+        <li><a href="./react.html">REACT</a></li>
+        <li><a href="./nodejs.html">NODEJS</a></li>
+        <li><a href="./devops.html">DEVOPS</a></li>
+      </ul>
     </nav>
     <header id="cabecalho">
-        <h1>HTML - Básico</h1>
+      <h1>DevOps - GitHub Pages e Docker</h1>
     </header>
-    
-    <main style="justify-items: center;">
-        <h2>Página em desenvolvimento</h2>
-        <img src="../arquivos/trabalho-em-progresso.png" width="280vh">
+
+    <main>
+      <section>
+        <h2>O papel do Node.js no Backend</h2>
+        <p>
+          O Node.js é uma plataforma construída sobre o motor de execução
+          JavaScript do Chrome, o V8. Ele permite criar servidores eficientes e
+          escaláveis, graças ao seu modelo de execução assíncrono e orientado a
+          eventos. Isso significa que o Node.js é excelente para aplicações em
+          tempo real e altamente escaláveis.
+        </p>
+      </section>
+
+      <!-- Explique como utilizar o GitHub Pages (GHPages) para hospedar o frontend de forma gratuita e simples. -->
+      <section>
+        <h2>Utilizando o GitHub Pages para Hospedagem</h2>
+        <button onclick="modal2.showModal()">
+          Ver Página Utilização de Módulos Principais
+        </button>
+        <dialog id="modal2">
+          <button class="close-button" onclick="modal2.close()">✕</button>
+          <h2>Utilizando o GitHub Pages para Hospedagem</h2>
+          <p>
+            O <strong>GitHub Pages</strong> é o serviço de hospedagem de sites
+            estáticos do Github. Ele usa arquivos HTML, CSS e JS diretamente de
+            um repositório, executa os arquivos por meio de um processo e
+            publica um site.
+          </p>
+          <ol>
+            <li>
+              Crie um repositório no GitHub com o nome
+              <strong>username.github.io</strong>.
+            </li>
+            <li>Clone o repositório para sua máquina local.</li>
+            <li>
+              Adicione os arquivos do seu site (HTML, CSS, JS) ao repositório.
+            </li>
+            <li>Realize um commit e envie (push) para o GitHub.</li>
+            <li>
+              O seu site estará disponível em
+              <strong>https://username.github.io</strong>.
+            </li>
+          </ol>
+          <p>
+            Para mais detalhes, você pode consultar a documentação oficial do
+            GitHub Pages
+            <a href="https://pages.github.com/" target="_blank">aqui</a>.
+          </p>
+          <hr />
+          <button onclick="modal2.close()">Fechar Modal</button>
+        </dialog>
+      </section>
+
+      <!-- Descreva como criar uma imagem Docker para o aplicativo, explicando os benefícios de containerização. -->
+      <section>
+        <h2>Criando uma Imagem Docker para o Aplicativo</h2>
+        <button onclick="modal3.showModal()">
+          Ver Página Estrutura de um Aplicativo Express.js
+        </button>
+        <dialog id="modal3">
+          <button class="close-button" onclick="modal3.close()">✕</button>
+          <h2>Criando uma Imagem Docker para o Aplicativo</h2>
+          <p>
+            A <strong>containerização</strong> com o Docker permite criar
+            ambientes isolados, chamados contêineres, para rodar sua aplicação
+            de forma consistente, independente do ambiente. Isso garante que seu
+            aplicativo funcione da mesma forma em qualquer lugar.
+          </p>
+          <p>
+            Para criar uma imagem Docker do seu aplicativo, você deve criar um
+            arquivo chamado <strong>Dockerfile</strong>. Este é um exemplo
+            básico de um Dockerfile para um aplicativo Node.js:
+          </p>
+
+          <h3>Exemplo de Dockerfile</h3>
+          <pre>
+            <code>
+              # Imagem base do Node.js
+              FROM node:22.8
+              
+              # Define o diretório de trabalho
+              WORKDIR /app
+              
+              # Copia o código da aplicação
+              COPY . .
+              
+              # Instala as Deps
+              RUN npm i
+              
+              # Expõe a porta
+              EXPOSE 3000
+              
+              # Comando para iniciar a aplicação
+              CMD ["npm", "start"]
+            </code>
+          </pre>
+          <p>
+            Esse Dockerfile cria uma imagem com o Node.js, copia seus arquivos
+            para o contêiner, instala as dependências e inicia o servidor.
+          </p>
+          <p>
+            Para construir a imagem Docker, basta executar o seguinte comando no
+            terminal:
+          </p>
+          <pre>
+            <code>
+            docker build . -t (Nome-do-App)
+            </code>
+          </pre>
+          <hr />
+          <button onclick="modal3.close()">Fechar Modal</button>
+        </dialog>
+      </section>
+
+      <!-- Forneça um exemplo de um Dockerfile e como utilizar o Docker Compose para orquestrar múltiplos contêineres. -->
+      <section>
+        <h2>Utilizando Docker Compose para Orquestrar Múltiplos Contêineres</h2>
+        <button onclick="modal4.showModal()">
+          Ver Página Integração com Banco de Dados
+        </button>
+        <dialog id="modal4">
+          <button class="close-button" onclick="modal4.close()">✕</button>
+          <h2>
+            Utilizando Docker Compose para Orquestrar Múltiplos Contêineres
+          </h2>
+          <p>
+            O <strong>Docker Compose</strong> é uma ferramenta para definir e
+            executar aplicativos Docker compostos por múltiplos contêineres. Ele
+            utiliza um arquivo chamado <strong>docker-compose.yml</strong> para
+            definir todos os contêineres e serviços necessários para a
+            aplicação.
+          </p>
+          <p>
+            Aqui está um exemplo de como utilizar o Docker Compose para iniciar
+            um contêiner para a aplicação Node.js e outro para o banco de dados
+            PostgreSQL:
+          </p>
+
+          <h3>Exemplo de docker-compose.yml</h3>
+          <pre>
+                  <code>
+                  version: '3'
+      
+                  services:
+                    app:
+                      build: .
+                      ports:
+                        - "3000:3000"
+                      depends_on:
+                        - postgres
+                      environment:
+                        - DB_HOST=postgres
+                        - DB_PORT=5432
+                        - DB_USER=(seuUSer)
+                        - DB_PASSWORD=(suaSenha)
+                        - DB_NAME=(nomeDoBanco)
+      
+                    postgres:
+                      image: postgres:latest
+                      environment:
+                        - POSTGRES_USER=(seuUSer)
+                        - POSTGRES_PASSWORD=(suaSenha)
+                        - POSTGRES_DB=(nomeDoBanco)
+                      volumes:
+                        - ./data:/var/lib/postgresql/data
+                      ports:
+                        - "5432:5432"
+                  </code>
+                </pre>
+          <p>
+            Neste exemplo, o serviço <strong>app</strong> é construído a partir
+            do Dockerfile, e o serviço <strong>postgres</strong> usa uma imagem
+            pronta do PostgreSQL. O serviço <strong>app</strong>
+            depende do PostgreSQL e o Docker Compose irá garantir que o
+            PostgreSQL esteja em funcionamento antes de iniciar a aplicação.
+          </p>
+          <p>
+            Para iniciar os contêineres com o Docker Compose, basta executar o
+            seguinte comando:
+          </p>
+          <pre>
+                    <code>
+                    docker-compose up
+                    </code>
+                </pre>
+          <p>
+            Isso irá iniciar os dois contêineres e sua aplicação será acessível
+            em <strong>http://localhost:3000</strong>.
+          </p>
+          <hr />
+          <button onclick="modal4.close()">Fechar Modal</button>
+        </dialog>
+      </section>
     </main>
 
     <footer>
-        <div class="final">
-    <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-philippe-6b4421224/">João Vitor <i class="fa-brands fa-linkedin"></i></a></p>
-    <a href="www.linkedin.com/in/kauêoenningdemoura">Kauê de Moura <i class="fa-brands fa-linkedin"></i></a></p>
-    <a href="https://www.linkedin.com/in/fabr%C3%ADcio-cavalcante-correia-baab76227/">Fabricio Cavalcante <i class="fa-brands fa-linkedin"></i></a></p>
-</div>
-</footer>
-<br>
+      <div class="final">
+        <a
+          href="https://www.linkedin.com/in/jo%C3%A3o-vitor-philippe-6b4421224/"
+          >João Vitor <i class="fa-brands fa-linkedin"></i
+        ></a>
+        <p>
+          <a href="www.linkedin.com/in/kauêoenningdemoura"
+            >Kauê de Moura <i class="fa-brands fa-linkedin"></i
+          ></a>
+        </p>
+        <p>
+          <a
+            href="https://www.linkedin.com/in/fabr%C3%ADcio-cavalcante-correia-baab76227/"
+            >Fabricio Cavalcante <i class="fa-brands fa-linkedin"></i
+          ></a>
+        </p>
+        <p></p>
+      </div>
+    </footer>
 
-</body>
+    <script>
+      const modals = ["modal", "modal2", "modal3", "modal4"];
+      modals.forEach((modalId) => {
+        const modal = document.getElementById(modalId);
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.close();
+          }
+        });
+      });
+
+      const header = document.getElementById("cabecalho");
+      document.addEventListener("keydown", (e) => {
+        console.log(`Foi clicado na tecla: ${e.key}`);
+      });
+    </script>
+    <br />
+  </body>
 </html>

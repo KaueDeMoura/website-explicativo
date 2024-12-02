@@ -21,7 +21,7 @@
   <body>
     <nav class="navbar">
       <ul class="nav-links">
-        <li><a href="./index.html">VOLTAR</a></li>
+        <li><a href="../index.html">VOLTAR</a></li>
         <li><a href="./html.html">HTML</a></li>
         <li><a href="./css.html">CSS</a></li>
         <li><a href="./js.html">JAVASCRIPT</a></li>
@@ -46,7 +46,9 @@
 
       <section>
         <h2>Manipulação de DOM</h2>
-        <button onclick="modal2.showModal()">Ver página Manipulação de DOM</button>
+        <button onclick="modal2.showModal()">
+          Ver página Manipulação de DOM
+        </button>
         <dialog id="modal2">
           <button class="close-button" onclick="modal2.close()">✕</button>
           <h2>Manipulação de DOM</h2>
@@ -104,7 +106,9 @@
       </section>
       <section>
         <h2>Manipulação de Dados</h2>
-        <button onclick="modal4.showModal()">Ver página Manipulação de Dados</button>
+        <button onclick="modal4.showModal()">
+          Ver página Manipulação de Dados
+        </button>
         <dialog id="modal4">
           <button class="close-button" onclick="modal4.close()">✕</button>
           <h2>Manipulação de Dados</h2>
@@ -158,24 +162,26 @@
         <a
           href="https://www.linkedin.com/in/jo%C3%A3o-vitor-philippe-6b4421224/"
           >João Vitor <i class="fa-brands fa-linkedin"></i
-        ></a><p>
-        <a href="www.linkedin.com/in/kauêoenningdemoura"
-          >Kauê de Moura <i class="fa-brands fa-linkedin"></i
-        ></a><p>
-        <a
-          href="https://www.linkedin.com/in/fabr%C3%ADcio-cavalcante-correia-baab76227/"
-          >Fabricio Cavalcante <i class="fa-brands fa-linkedin"></i
-        ></a><p>
+        ></a>
+        <p>
+          <a href="www.linkedin.com/in/kauêoenningdemoura"
+            >Kauê de Moura <i class="fa-brands fa-linkedin"></i
+          ></a>
+        </p>
+
+        <p>
+          <a
+            href="https://www.linkedin.com/in/fabr%C3%ADcio-cavalcante-correia-baab76227/"
+            >Fabricio Cavalcante <i class="fa-brands fa-linkedin"></i
+          ></a>
+        </p>
+
+        <p></p>
       </div>
     </footer>
 
     <script>
-      const modals = [
-        "modal2",
-        "modal3",
-        "modal4",
-        "modal5",
-      ];
+      const modals = ["modal2", "modal3", "modal4", "modal5"];
       modals.forEach((modalId) => {
         const modal = document.getElementById(modalId);
         modal.addEventListener("click", (e) => {
@@ -192,6 +198,6 @@
     </script>
 
     <script src="/JS/script.js"></script>
-    <br>
+    <br />
   </body>
 </html>
