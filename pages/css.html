@@ -7,24 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style/introducao.css" />
     <script
-    src="https://kit.fontawesome.com/b4b635e117.js"
-    crossorigin="anonymous"
-  ></script>
+      src="https://kit.fontawesome.com/b4b635e117.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Propriedades CSS</title>
   </head>
   <style>
     li {
       margin-top: 4px;
     }
-
-
-
   </style>
 
   <body>
     <nav class="navbar">
       <ul class="nav-links">
-        <li><a href="./index.html">VOLTAR</a></li>
+        <li><a href="../index.html">VOLTAR</a></li>
         <li><a href="./html.html">HTML</a></li>
         <li><a href="./css.html">CSS</a></li>
         <li><a href="./js.html">JAVASCRIPT</a></li>
@@ -84,7 +81,9 @@
       <!-- Propriedades de Texto -->
       <section>
         <h2>Propriedades de Texto</h2>
-        <button onclick="modal2.showModal()">Ver página Propriedades de Texto</button>
+        <button onclick="modal2.showModal()">
+          Ver página Propriedades de Texto
+        </button>
         <dialog id="modal2">
           <button class="close-button" onclick="modal2.close()">✕</button>
           <h2>Propriedades de Texto</h2>
@@ -117,7 +116,9 @@
       <!-- Propriedades de Layout -->
       <section>
         <h2>Propriedades de Layout</h2>
-        <button onclick="modal3.showModal()">Ver página Propriedades de Layout</button>
+        <button onclick="modal3.showModal()">
+          Ver página Propriedades de Layout
+        </button>
         <dialog id="modal3">
           <button class="close-button" onclick="modal3.close()">✕</button>
           <h2>Propriedades de Layout</h2>
@@ -151,7 +152,9 @@
       <!-- Propriedades de Box Model -->
       <section>
         <h2>Propriedades do Modelo de Caixa (Box Model)</h2>
-        <button onclick="modal4.showModal()">Ver página Propriedades de Box Model</button>
+        <button onclick="modal4.showModal()">
+          Ver página Propriedades de Box Model
+        </button>
         <dialog id="modal4">
           <button class="close-button" onclick="modal4.close()">✕</button>
           <h2>Propriedades do Modelo de Caixa (Box Model)</h2>
@@ -184,7 +187,9 @@
       <!-- Propriedades de Background -->
       <section>
         <h2>Propriedades de Fundo (Background)</h2>
-        <button onclick="modal5.showModal()">Ver página Propriedades de Fundo</button>
+        <button onclick="modal5.showModal()">
+          Ver página Propriedades de Fundo
+        </button>
         <dialog id="modal5">
           <button class="close-button" onclick="modal5.close()">✕</button>
           <h2>Propriedades de Fundo (Background)</h2>
@@ -268,7 +273,14 @@
     </footer>
 
     <script>
-      const modals = ["modal", "modal2", "modal3", "modal4", "modal5", "modal6"];
+      const modals = [
+        "modal",
+        "modal2",
+        "modal3",
+        "modal4",
+        "modal5",
+        "modal6",
+      ];
       modals.forEach((modalId) => {
         const modal = document.getElementById(modalId);
         modal.addEventListener("click", (e) => {
@@ -283,6 +295,6 @@
         console.log(`Foi clicado na tecla: ${e.key}`);
       });
     </script>
-    <br>
+    <br />
   </body>
 </html>
